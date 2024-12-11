@@ -27,6 +27,7 @@ internal class Program
         };
 
         IEnumerable<Employee> employees = collections1.UnionBy(collections2, e => e.Id);
+    //    IEnumerable<Employee> employees = collections1.UnionBy(collections2, e => new { e.Id, e.Name }); // if i need to remove the duplicated based on the id and the name
         foreach (Employee employee in employees)
         {
             Console.WriteLine($" id : {employee.Id} ,name :{employee.Name} , age :{employee.Age}");
@@ -37,5 +38,15 @@ internal class Program
         // id: 1 ,name: amr , age: 25
         // id: 2 ,name: ali , age: 26
         // id: 3 ,name: mohamed , age: 26
+
+
+
+        // IntersectBy and ExceptBy like the same UnionBy the common between then are they are remove the duplicates based on the key
+        // they are use mostly which reference data types not primitive data types
+        // they are differed execution
+
+
+       
+
     }
 }
